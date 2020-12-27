@@ -1,0 +1,150 @@
+$primary-font: 'Inter', sans-serif;
+
+$dark-blue: hsl(240, 38%, 20%);
+$grayish-blue: hsl(240, 18%, 77%);
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+        flex-direction: row-reverse;
+    }
+
+    .first__content {
+        width: 100%;
+        height: 100%;
+        background: url("images/pattern-bg.svg") no-repeat;
+        background-position: top center;
+        background-size: contain;
+        position: relative;
+
+        /*@media (min-width: 768px) {
+            width: 65%;
+        }
+
+        @media (min-width: 1024px) {
+            width: 70%;
+        }*/
+
+        .image__container {
+            width: 220px;
+            height: 220px;
+            margin: 30px auto;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .image__container > img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .second__content {
+        display: flex;
+        flex-direction: column;
+        background: url("images/pattern-quotes.svg") no-repeat;
+        background-position: top center;
+        background-size: 50px;
+        margin: 20px auto;
+        align-self: center;
+
+        /*@media (min-width: 768px) {
+            position: absolute;
+            left: 82px;
+            width: 400px;
+        }
+
+        @media (min-width: 1024px) {
+            left: 233px;
+        }*/
+    
+        p {
+            font-family: $primary-font;
+            font-size: 16px;
+            color: $dark-blue;
+            margin: 20px 35px;
+            text-align: center;
+            font-weight: 300;
+
+            @media (min-width: 768px) {
+                text-align: left;
+            }
+
+            @media (min-width: 1024px) {
+                font-size: 32px;
+            }
+        }
+
+        .person__details {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            width: auto;
+            height: auto;
+            font-family: $primary-font;
+            margin: 20px auto;
+
+            @media (min-width: 768px) {
+                flex-direction: row;
+                margin: 0 35px;
+            }
+        }
+
+        .person__details > .person__name {
+            font-size: 14px;
+            color: $dark-blue;
+            font-weight: 700;
+        }
+
+        .person__details > .person__role {
+            font-size: 13px;
+            color: $grayish-blue;
+            font-weight: 500;
+            margin: 3px 0 0 0;
+            
+
+            @media (min-width: 768px) {
+                margin: 0 0 0 10px;
+            }
+        }
+    }
+
+    .slider__buttons {
+        position: absolute;
+        content: "";
+        top: 241px;
+        right: 125px;
+        display: flex;
+        border-radius: 40px;
+        overflow: hidden;
+        height: auto;
+        background: white;
+        box-shadow: 0 5px 10px gray;
+
+        @media (min-width: 768px) {
+            right: 280px;
+        }
+
+        .btn__slider {
+            border: none;
+            background: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .btn__slider > img {
+            width: 50%;
+            height: 60%;
+        }
+
+        .btn__slider--prev {
+
+        }
+
+        #btn__slider--next {
+            
+        }
+    }
+}
